@@ -20,8 +20,8 @@ export const fetchUserData = async (req, res) => {
     res.json(data);
   } catch (error) {
     console.error('Error fetching user data:', error);
-    res.status(500).json({ error: 'Internal Server Error' });
-  }
+    res.status(500).json({ error: error.message || 'Internal Server Error' });
+}
 };
 
 
