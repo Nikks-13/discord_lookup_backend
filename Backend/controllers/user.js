@@ -21,6 +21,7 @@ export const fetchUserData = async (req, res) => {
   } catch (error) {
     console.error('Error fetching user data:', error);
     res.status(500).json({ error: error.message || 'Internal Server Error' });
+    console.error(error);  
 }
 };
 
