@@ -1,7 +1,7 @@
 import React,{ useState } from 'react'
 import {Div,ImgDiv,Button,InputBox,InputDiv,Lable,OutputDiv,H4,Container,Img,InfoDiv,P,ErrorP,ErrorDiv } from './styledcomponents';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faIdBadge, faIdCard,faStar,faStarOfLife} from '@fortawesome/free-solid-svg-icons';
+import { faUser, faIdBadge, faIdCard,faStarOfLife} from '@fortawesome/free-solid-svg-icons';
 
 
 const Body = () => {
@@ -18,7 +18,7 @@ const Body = () => {
     try {
      
       
-      const response = await fetch(`http://localhost:3001/api/users/${discordUserId}`);
+      const response = await fetch(`https://mackerel-slacks.cyclic.app/api/users/${discordUserId}`);
       const data = await response.json();
      
       console.log(data);
